@@ -1,16 +1,24 @@
 import React from 'react';
+import { ItemWrapper }  from './style';
 
 const Item = ({ type, content }) => {
+  const textBox = React.useRef();
+
+  React.useEffect(() => {
+    textBox.current.focus();
+  });
+  
   return (
-    <div>
+    <ItemWrapper>
       {
         !type ? (
           <textarea
+            ref={textBox}
             value={content}
           />
         ) : <p>Some new item</p>
       }
-    </div>
+    </ItemWrapper>
   );
 }
 

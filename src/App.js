@@ -1,5 +1,5 @@
 import React from 'react';
-import PostBuilder from './Components/PostBuilder';
+import PostBuilder from './Components/PostBuilder/';
 
 const App = () => {
   return (
