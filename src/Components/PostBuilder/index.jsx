@@ -22,6 +22,12 @@ const PostBuilder = () => {
     });
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      addItem(null, '')
+    }
+  }
+
   return (
     <div className="post">
       {items.map(item => (
@@ -30,6 +36,7 @@ const PostBuilder = () => {
           type={item.type}
           content={item.content}
           updateItem={(newContent) => updateItem(item.id, newContent)}
+          handleKeyPress={handleKeyPress}
         />
       ))}
     </div>
