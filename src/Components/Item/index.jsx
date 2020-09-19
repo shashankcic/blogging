@@ -1,7 +1,7 @@
 import React from 'react';
 import { ItemWrapper }  from './style';
 
-const Item = ({ type, content }) => {
+const Item = ({ type, content, updateItem }) => {
   const textBox = React.useRef();
 
   React.useEffect(() => {
@@ -15,6 +15,7 @@ const Item = ({ type, content }) => {
           <textarea
             ref={textBox}
             value={content}
+            onChange = {(e) => updateItem(e.target.value)}
           />
         ) : <p>Some new item</p>
       }
