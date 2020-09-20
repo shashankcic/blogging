@@ -1,14 +1,15 @@
 import React from 'react';
 import { componentMappings } from '../Item';
+import { ToolbarWrapper } from './style';
 
 const Toolbar = ({addItem}) => (
-  <div className="toolbar">
+  <ToolbarWrapper>
     {Object.keys(componentMappings).map(key => (
       <button onClick={() => addItem(key, {})}>
         {key}
       </button>
     ))}
-  </div>
+  </ToolbarWrapper>
 );
 
 export default Toolbar;
