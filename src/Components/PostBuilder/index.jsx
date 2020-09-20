@@ -1,6 +1,7 @@
 import React from 'react';
 import { v1 as uuid } from 'uuid';
 import Item from '../Item';
+import Toolbar from '../Toolbar';
 
 const PostBuilder = () => {
   const [items, setItems] = React.useState([{
@@ -39,6 +40,7 @@ const PostBuilder = () => {
           handleKeyPress={handleKeyPress}
         />
       ))}
+      <Toolbar addItem={addItem} />
     </div>
   );
 }

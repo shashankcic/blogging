@@ -3,14 +3,16 @@ import { ItemWrapper }  from './style';
 import Image from '../Image';
 
 export const componentMappings = {
-  img: (content) => <Image {...content} />
+  img: (content, updateItem) => <Image {...content} updateItem={updateItem} />
 };
 
 const Item = ({ type, content, updateItem, handleKeyPress }) => {
   const textBox = React.useRef();
 
   React.useEffect(() => {
-    textBox.current.focus();
+    if (!type) {
+      textBox.current.focus();
+    }
   });
 
   return (
@@ -23,7 +25,7 @@ const Item = ({ type, content, updateItem, handleKeyPress }) => {
             value={content}
             onChange = {(e) => updateItem(e.target.value)}
           />
-        ) : componentMappings[type](content)
+        ) : componentMappings[type](content, updateItem)
       }
     </ItemWrapper>
   );
