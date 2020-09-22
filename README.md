@@ -1,3 +1,7 @@
+# Blogging
+
+A web app for writing blogs. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Running on Repl.it
