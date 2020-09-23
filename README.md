@@ -1,6 +1,6 @@
 # Blogging
 
-A web app for writing blogs. 
+A web app for writing blogs in React. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
